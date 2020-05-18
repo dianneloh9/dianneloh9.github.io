@@ -1,0 +1,205 @@
+$my_pink: #F78888;
+$my_yellow: #F3D250;
+$my_white: #ECECEC;
+$my_lightblue: #90CCF4;
+$my_blue: #5DA2D5;
+
+
+.text {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#welcome {
+    margin-top: 80px;
+}
+
+.centre {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-centre {
+    @extend .centre;
+    @extend .text;
+    text-align: center;
+}
+
+.text-centre-bold {
+    @extend .text-centre;
+    font-weight: bold;
+}
+
+#name {
+    @extend .text-centre-bold;
+    margin-bottom: 30px;
+}
+
+.img_centre {
+
+    padding: 25px;
+
+    img {
+        @extend .centre;
+        width: 50%;
+    }
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    color: $my_pink;
+}
+
+#menu {
+
+    background-color: $my_white;
+    text-align: right;
+    width: 100%;
+
+    #home {
+        text-align: left;
+        padding-left: 60px;
+    }
+
+    #nav {
+        padding-right: 60px;
+    }
+
+    td {
+        padding: 15px;
+    }
+    
+    a {
+        margin: 20px;
+    }
+
+    @media only screen and (max-width: 600px) {
+        a {
+            margin: 5px;
+        }
+    }
+}
+
+.current {
+    font-weight: bold;
+}
+
+#avatar {
+    @extend .centre;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.bio {
+    @extend .centre;
+    width: 70%;
+}
+
+#portfolio-content {
+    @extend .centre;
+    width: 75%;
+
+    .short {
+        display: none;
+    }
+
+    .date {
+        text-align: right;
+    }
+
+    .portfolio-heading {
+        padding-top: 20px;
+    }
+
+    td {
+        padding: 0 20px;
+    }
+
+    .portfolio-sub {
+        padding-bottom: 20px;
+    }
+
+    img {
+        width: 200px;
+    }
+
+    @media only screen and (max-width: 800px) {
+
+        .short {
+            display: inline-block;
+        }
+
+        .long {
+            display: none;
+        }
+
+        h3 {
+            font-size: 24px;
+        }
+
+        h5 {
+            font-size: 18px;
+            font-weight: normal;
+        }
+
+        td {
+            font-size: 12px;
+        }
+    }
+}
+
+#portfolio-list {
+    @extend .text-centre;
+    margin-top: 20px;
+    list-style: none;
+}
+
+#message {
+    width: 90%;
+}
+
+#message::placeholder {
+    vertical-align: text-top;
+}
+
+h1 {
+    margin: 20px;
+}
+
+#social-media {
+    list-style: none;
+
+    li {
+        display: inline;
+    }
+
+    img {
+        height: 20px;
+        width: 20px;
+        margin: 0 10px;
+    }
+    
+}
+
+#contact-big {
+    display: block;
+    width: 75%;
+}
+
+#contact-small {
+    display: none;
+}
+
+@media only screen and (max-width: 800px) {
+    #contact-big {
+        display: none;
+    }
+
+    #contact-small {
+        display: block;
+        width: 75%;
+        margin: 0 auto;
+    }
+}
